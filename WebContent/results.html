@@ -1,0 +1,125 @@
+<!--
+    This .html performs two steps:
+    1. Create a html template skeleton, with all the elements defined (some left empty) and named with ids.
+    2. Load results.js to populate the data into empty elements.
+    -->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/ae15245d59.js" crossorigin="anonymous"></script>
+
+  <title>Movie List</title>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+
+    <!-- Collapsible wrapper -->
+    <div class="navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <a class="navbar-brand mt-2 mt-lg-0" href="index.html">
+        <img
+                src="images\Fabflix-logos_transparent.png"
+                height="30"
+                alt="Fabflix"
+                loading="lazy"
+        />
+      </a>
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="top20.html">Top 20</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="results.html"> Results</a>
+        </li>
+      </ul>
+      <!-- Left links -->
+    </div>
+    <!-- Right elements -->
+    <div class="d-flex align-items-center">
+      <!-- Icon -->
+      <a class="text-reset me-3" href="cart.html">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+<label>Sort By: </label>
+<select name="sort-dropdown" class="form-select" aria-label="select sorting">
+  <option selected value="1">Title ↑ Rating ↓</option>
+  <option value="2">Title ↓ Rating ↑</option>
+  <option value="3">Title ↓ Rating ↓</option>
+  <option value="4">Title ↑ Rating ↑</option>
+  <option value="5">Rating ↑ Title ↑</option>
+  <option value="6">Rating ↓ Title ↑</option>
+  <option value="7">Rating ↑ Title ↓</option>
+  <option value="8">Rating ↓ Title ↓</option>
+</select>
+
+<label>Movies Per Page:  </label>
+<select name="count-dropdown" class="form-select" aria-label="select sorting">
+  <option selected value="10">10</option>
+  <option value="25">25</option>
+  <option value="50">50</option>
+  <option value="100">100</option>
+</select>
+
+
+
+<table id=movie_table class="table table-striped">
+  <!-- Create a table header -->
+  <thead>
+  <tr>
+    <!-- Titles of each column-->
+    <th>Movie Title</th>
+    <th>Year Released</th>
+    <th>Director</th>
+    <th>Genres</th>
+    <th>Stars</th>
+    <th>Rating</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody id=movie_table_body></tbody>
+</table>
+
+<nav aria-label="pagination-bar">
+  <ul class="pagination">
+    <li class="page-item disabled">
+      <a id=prev class="page-link" href="#">Previous</a>
+    </li>
+    <li class="page-item disabled">
+      <p id=page-num class="page-link">1</p>
+    </li>
+    <li class="page-item">
+      <a id=next class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- Load results.JS file -->
+<script src="results.js"></script>
+</body>
+
+
+</html>

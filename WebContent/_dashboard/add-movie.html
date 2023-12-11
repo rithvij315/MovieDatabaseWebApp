@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/ae15245d59.js" crossorigin="anonymous"></script>
+
+  <title>Add a Movie</title>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+
+    <!-- Collapsible wrapper -->
+    <div class="navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <a class="navbar-brand mt-2 mt-lg-0" href="../index.html">
+        <img
+                src="../images/Fabflix-logos_transparent.png"
+                height="30"
+                alt="Fabflix"
+                loading="lazy"
+        />
+      </a>
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Employee Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="add-movie.html">Add a movie</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="add-star.html">Add a star</a>
+        </li>
+      </ul>
+      <!-- Left links -->
+    </div>
+  </div>
+</nav>
+
+
+<h1 class="text-center"> Add a movie </h1>
+
+<form id="movie-form" method="post">
+  <label><b>Title</b></label>
+  <label>
+    <input name="title" placeholder="Enter Movie Title" type="text" required>
+  </label>
+  <br>
+  <label><b>Year</b></label>
+  <label>
+    <input name="year" placeholder="Enter Year" type="number" required>
+  </label>
+  <br>
+  <label><b>Director</b></label>
+  <label>
+    <input name="director" placeholder="Enter Movie Director" type="text" required>
+  </label>
+  <br>
+  <label><b>Star</b></label>
+  <label>
+    <input name="star" placeholder="Enter Star Name" type="text" required>
+  </label>
+  <br>
+  <label><b>Star Birth Year</b></label>
+  <label>
+    <input name="birth-year" placeholder="Enter Star Birth Year" type="number">
+  </label>
+  <br>
+  <label><b>Genre</b></label>
+  <label>
+    <input name="genre" placeholder="Enter Genre" type="text" required>
+  </label>
+  <br>
+  <input type="submit" value="Add Movie">
+</form>
+
+<div id="add_movie_message"></div>
+
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<!-- Load results.JS file -->
+<script src="add-movie.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
